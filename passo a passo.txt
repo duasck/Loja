@@ -1,0 +1,53 @@
+1- Criar uma venv 
+
+a) py -m venv venv
+
+2- Ativar a venv
+
+a) ./venv/Scripts/activate
+
+b) Ctrl + Shift + P 
+
+c) Python Select Interpreter
+
+d) Selecionar a venv
+
+3- Instalar dependencias 
+
+a) pip install django djangorestframework django-cors-headers
+
+b) pip freeze [verificar se foi instalado]
+
+4- Criar requeriments 
+
+a) pip freeze > requirements.txt 
+
+5- Iniciar o projeto
+
+a) django-admin startproject api_root .
+
+6- Criar os aplicativos [como se fosse partes ou pastas]
+
+a) py manage.py startapp usuario
+
+7- Configurar as novas dependencias na root
+
+a) abrir settings.py [api_root/sttings.py]
+
+b) adicionar em INSTALED_APPS
+
+c) adicionar o corsheaders
+
+8- Criar os modelos no BD
+
+a) py manage.py makemigrations
+
+b) py manage.py migrate
+
+8- Adicionando um SU
+
+a) py manage.py createsuperuser  [admin admin]
+
+9- Rodar a aplicação 
+
+a) py manage.py runserver
